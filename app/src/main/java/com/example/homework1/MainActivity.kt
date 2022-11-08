@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProviders
+import com.example.homework1.MyViewModel
 import com.example.homework1.R
 
 
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val model: ViewModel = ViewModelProviders.of(this).get(ViewModel::class.java)
+        val model: ViewModel = ViewModelProviders.of(this).get(MyViewModel::class.java)
 
         setContentView(R.layout.activity_main)
         val button: Button = findViewById(R.id.button)
