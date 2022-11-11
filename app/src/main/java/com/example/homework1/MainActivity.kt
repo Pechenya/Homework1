@@ -3,7 +3,6 @@ package com.example.homework
 //noinspection SuspiciousImport
 
 import android.annotation.SuppressLint
-import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,9 +12,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import com.example.homework1.MyViewModel
 import com.example.homework1.R
 
@@ -45,7 +42,7 @@ object FragmentData {
 
 class MainActivity : AppCompatActivity() {
     private val fragmentManager = supportFragmentManager
-    val modelFr: MyViewModel = ViewModelProviders.of(this).get(MyViewModel::class.java)
+    val modelFr: MyViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
 
 
     @SuppressLint("MissingInflatedId")
